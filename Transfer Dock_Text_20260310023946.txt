@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seed Foundation India</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#e8f5e9;
+}
+
+/* HEADER */
+
+header{
+background:#0c7c59;
+color: white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+/* NAV */
+
+nav a{
+color:#ffd54f;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color: white;
+}
+
+/* HERO */
+
+.hero{
+background:url("https://images.unsplash.com/photo-1593113598332-cd59a93b8c3f") center/cover;
+height:450px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero p{
+margin:10px 0;
+}
+
+.btn{
+background:#ff9800;
+color:white;
+padding:14px 30px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* SECTIONS */
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+/* CARDS */
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+width:260px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* IMPACT */
+
+.impact{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:50px;
+margin-top:30px;
+}
+
+.impact div{
+font-size:30px;
+color:#0c7c59;
+font-weight:bold;
+}
+
+/* DONATION */
+
+.donation-box{
+background:white;
+padding:35px;
+max-width:350px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.counter{
+font-size:32px;
+color:#0c7c59;
+margin:10px 0;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* FORM */
+
+form input{
+width:260px;
+padding:12px;
+margin:8px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.social a{
+color:#ffd54f;
+margin:10px;
+text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:34px;
+}
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Seed Foundation India</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#campaign">Campaign</a>
+<a href="#impact">Impact</a>
+<a href="#donate">Donate</a>
+<a href="#gallery">Gallery</a>
+<a href="#volunteer">Volunteer</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Support Our Mission</h1>
+<p>Education • Food • Humanity</p>
+
+<a href="#donate" class="btn">Donate Now</a>
+
+</section>
+
+<section class="section" id="about">
+
+<h2>About Us</h2>
+
+<p>
+Seed Foundation India is dedicated to helping poor children
+with education, food and essential support.
+</p>
+
+</section>
+
+<section class="section" id="campaign">
+
+<h2>Our Campaigns</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Education</h3>
+<p>School books and support for children.</p>
+</div>
+
+<div class="card">
+<h3>Food Program</h3>
+<p>Daily meals for poor families.</p>
+</div>
+
+<div class="card">
+<h3>Clothes Drive</h3>
+<p>Providing clothes for summer and winter.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="impact">
+
+<h2>Our Impact</h2>
+
+<div class="impact">
+
+<div id="child">250<br><small>Children Helped</small></div>
+
+<div id="food">500<br><small>Food Kits</small></div>
+
+<div id="vol">50<br><small>Volunteers</small></div>
+
+</div>
+
+</section>
+
+<section class="section" id="donate">
+
+<h2>Donate</h2>
+
+<div class="donation-box">
+
+<p>Goal ₹50,000</p>
+
+<div class="counter" id="money">₹0</div>
+
+<button class="btn" onclick="donate(10)""donate(20)""donate(50)""donate(100)"> ₹10Donate ₹20Donate ₹50Donate ₹100</button>
+
+<br><br>
+
+<b>UPI ID</b>
+
+<p>UPI ID: 9241844399@kotak811</p>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=seedfoundation@upi">
+
+</div>
+
+</section>
+
+<section class="section" id="gallery">
+
+<h2>Our Work</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+<img src="https://images.unsplash.com/photo-1529390079861-591de354faf5">
+<img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6">
+
+</div>
+
+</section>
+
+<section class="section" id="volunteer">
+
+<h2>Become a Volunteer</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name"><br>
+<input type="email" placeholder="Email"><br>
+<input type="text" placeholder="Phone"><br>
+
+<button class="btn">Register</button>
+
+</form>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: support@seedfoundation.in</p>
+
+<p>Phone: +91 9241844399</p>
+
+<div class="social">
+
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">YouTube</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Seed Foundation India
+
+</footer>
+
+<script>
+
+let total = 20000;
+
+function donate(amount){
+
+total += amount;
+
+document.getElementById("money").innerText = "₹" + total;
+
+alert("Thank you for your donation ❤️");
+
+}
+
+/* IMPACT COUNTER */
+
+let c=0,f=0,v=0;
+
+setInterval(()=>{
+
+if(c<1200){c+=20;document.getElementById("child").innerHTML=c+"<br><small>Children Helped</small>";}
+
+if(f<500){f+=10;document.getElementById("food").innerHTML=f+"<br><small>Food Kits</small>";}
+
+if(v<300){v+=5;document.getElementById("vol").innerHTML=v+"<br><small>Volunteers</small>";}
+
+},100);
+
+</script>
+
+</body>
+</html>
